@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b10">
+  <title>Huddle TV | Temporarily Down</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink: #f5f7fa; --muted: #929ba9; --line: #242a34; --panel: rgba(17,22,30,.78); --accent: #48b9cf; --page: #080b10; }
+    * { box-sizing: border-box; }
+    html { color-scheme: dark; }
+    body { position: relative; display: grid; min-height: 100vh; margin: 0; overflow: hidden; color: var(--ink); background: var(--page); font-family: "DM Sans", sans-serif; }
+    body::before, body::after { position: fixed; z-index: -1; width: 65vw; height: 42vw; border-radius: 50%; filter: blur(80px); opacity: .25; content: ""; pointer-events: none; }
+    body::before { top: -25vw; left: -15vw; background: radial-gradient(ellipse, var(--accent), transparent 70%); }
+    body::after { right: -20vw; bottom: -25vw; background: radial-gradient(ellipse, #4965a7, transparent 70%); opacity: .18; }
+    .topbar { position: fixed; top: 18px; left: 50%; z-index: 2; display: flex; align-items: center; gap: 26px; width: max-content; max-width: calc(100% - 24px); padding: 10px 15px; border: 1px solid rgba(255,255,255,.04); border-radius: 30px; background: rgba(255,255,255,.025); box-shadow: 0 10px 30px rgba(0,0,0,.16); transform: translateX(-50%); backdrop-filter: blur(12px); }
+    .brand { display: flex; align-items: center; gap: 11px; color: var(--ink); text-decoration: none; font: 800 15px "Manrope", sans-serif; letter-spacing: -.04em; }
+    .brand-mark { display: grid; place-items: center; width: 28px; height: 28px; }
+    .brand-mark img { width: 100%; height: 100%; object-fit: contain; }
+    nav { display: none; }
+    main { display: grid; place-items: center; width: min(760px, calc(100% - 36px)); margin: auto; padding-top: 46px; }
+    .panel { position: relative; width: 100%; padding: 56px 54px 50px; border: 1px solid rgba(255,255,255,.12); border-radius: 18px; background: linear-gradient(145deg, rgba(23,31,40,.88), rgba(12,16,23,.86)); box-shadow: 0 30px 90px rgba(0,0,0,.36); text-align: center; backdrop-filter: blur(18px); }
+    .status-icon { display: grid; place-items: center; width: 62px; height: 62px; margin: 0 auto 24px; border: 1px solid rgba(72,185,207,.42); border-radius: 50%; color: var(--accent); background: rgba(72,185,207,.1); }
+    .status-icon svg { width: 29px; height: 29px; }
+    .eyebrow { color: var(--accent); font-size: 10px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 14px 0 13px; font: 800 clamp(30px, 5vw, 48px)/1.05 "Manrope", sans-serif; letter-spacing: -.06em; }
+    .message { max-width: 500px; margin: 0 auto; color: #c1c8d1; font-size: 14px; line-height: 1.7; }
+    .notice { display: inline-flex; align-items: center; gap: 8px; margin-top: 25px; padding: 8px 12px; border: 1px solid rgba(255,209,102,.28); border-radius: 18px; color: #ffd166; background: rgba(255,209,102,.08); font-size: 11px; font-weight: 700; }
+    .discord-link { display: inline-flex; align-items: center; justify-content: center; gap: 10px; margin-top: 30px; padding: 12px 18px; border: 1px solid #5865f2; border-radius: 22px; color: white; background: #5865f2; text-decoration: none; font-size: 12px; font-weight: 700; transition: transform .2s ease, filter .2s ease; }
+    .discord-link:hover { filter: brightness(1.12); transform: translateY(-2px); }
+    .discord-link svg { width: 19px; height: 19px; fill: currentColor; }
+    footer { position: fixed; right: 0; bottom: 22px; left: 0; color: #697381; font-size: 10px; text-align: center; }
+    @media (max-width: 600px) { .topbar { top: 12px; } nav { display: none; } .panel { padding: 42px 24px 36px; } main { padding-top: 30px; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index"><span class="brand-mark"><img src="logo.png" alt=""></span> huddle<span style="color:var(--accent)">tv</span></a>
+  </header>
+  <main>
+    <section class="panel" aria-labelledby="status-title">
+      <div class="status-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3v10m0 4v.01"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <div class="eyebrow">Temporary outage</div>
+      <h1 id="status-title">Huddle TV is currently down</h1>
+      <p class="message">We are currently experiencing problems with <strong>cinesrc.st</strong>, the service that powers our video playback. Movies, shows, and anime will be available again when the service is back online.</p>
+      <div class="notice"><span aria-hidden="true">!</span> Playback is temporarily unavailable</div>
+      <a class="discord-link" href="https://discord.gg/AApSaH6Yfz" target="_blank" rel="noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19.54 5.05A16.9 16.9 0 0 0 15.4 3.76l-.5 1.02a15.7 15.7 0 0 0-5.8 0l-.5-1.02a16.9 16.9 0 0 0-4.14 1.3C1.84 8.9 1.13 12.64 1.48 16.33a16.7 16.7 0 0 0 5.1 2.58l1.24-1.7c-.68-.25-1.33-.56-1.94-.92l.47-.36c3.74 1.75 7.8 1.75 11.5 0 .16.13.32.25.48.36-.62.36-1.27.67-1.95.92l1.24 1.7a16.7 16.7 0 0 0 5.1-2.58c.42-4.28-.72-7.98-3.18-11.28ZM8.73 14.82c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2 2 .99 2 2.2-.9 2.2-2 2.2Zm6.54 0c-1.1 0-2-.99-2-2.2s.88-2.2 2-2.2 2 .99 2 2.2-.9 2.2-2 2.2Z"/></svg>
+        Join Discord for updates
+      </a>
+    </section>
+  </main>
+  <footer>huddletv Â· status page</footer>
+</body>
+</html>
